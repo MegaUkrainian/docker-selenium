@@ -2,18 +2,23 @@
 # NOTE: DO *NOT* EDIT THIS FILE.  IT IS GENERATED.
 # PLEASE UPDATE Dockerfile.txt INSTEAD OF THIS FILE
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-FROM selenium/node-chrome:3.5.2-antimony
+FROM node-chrome-videorec:1.0
 LABEL authors=SeleniumHQ
 
 USER root
 
 #=====
-# VNC
+# VNC, ffmpeg
 #=====
 RUN apt-get update -qqy \
-  && apt-get -qqy install \
-  x11vnc \
-  && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
+  && DEBIAN_FRONTEND=noninteractive apt-get -qqy install software-properties-common python-software-properties \
+    && add-apt-repository ppa:mc3man/xerus-media \
+    && apt-get update -qqy \
+    && apt-get -qqy install \
+    x11vnc \
+    ffmpeg \
+    && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
+#=====
 
 #=================
 # Locale settings

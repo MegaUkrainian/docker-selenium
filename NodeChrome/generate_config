@@ -14,6 +14,7 @@ cat <<_EOF
     }
   ],
   "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
+  "servlets": ["com.portaone.videonode.core.VideoServlet"],
   "maxSession": $NODE_MAX_SESSION,
   "port": $NODE_PORT,
   "register": true,

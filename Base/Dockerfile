@@ -55,7 +55,6 @@ USER seluser
 # Selenium
 #==========
 RUN  sudo mkdir -p /opt/selenium \
-  && sudo chown seluser:seluser /opt/selenium \
-  && wget --no-verbose https://selenium-release.storage.googleapis.com/3.5/selenium-server-standalone-3.5.2.jar \
-    -O /opt/selenium/selenium-server-standalone.jar
+  && sudo chown seluser:seluser /opt/selenium
 
+ADD videonode-1.0.jar /opt/selenium/selenium-server-standalone.jar

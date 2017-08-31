@@ -2,7 +2,7 @@
 # NOTE: DO *NOT* EDIT THIS FILE.  IT IS GENERATED.
 # PLEASE UPDATE Dockerfile.txt INSTEAD OF THIS FILE
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-FROM selenium/base:3.5.2-antimony
+FROM base-videorec:1.0
 LABEL authors=SeleniumHQ
 
 USER root
@@ -32,8 +32,8 @@ COPY entry_point.sh \
 #============================
 # Some configuration options
 #============================
-ENV SCREEN_WIDTH 1360
-ENV SCREEN_HEIGHT 1020
+ENV SCREEN_WIDTH 1386
+ENV SCREEN_HEIGHT 820
 ENV SCREEN_DEPTH 24
 ENV DISPLAY :99.0
 
