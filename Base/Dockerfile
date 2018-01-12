@@ -57,4 +57,4 @@ USER seluser
 RUN  sudo mkdir -p /opt/selenium \
   && sudo chown seluser:seluser /opt/selenium
 
-ADD videonode-1.0.jar /opt/selenium/selenium-server-standalone.jar
+ADD videonode-1.1.jar /opt/selenium/selenium-server-standalone.jar

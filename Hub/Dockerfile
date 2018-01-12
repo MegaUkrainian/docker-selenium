@@ -2,8 +2,8 @@
 # NOTE: DO *NOT* EDIT THIS FILE.  IT IS GENERATED.
 # PLEASE UPDATE Dockerfile.txt INSTEAD OF THIS FILE
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-FROM base-videorec:1.0
-LABEL authors=mike
+FROM selenium/base:3.8.1-dubnium
+LABEL authors=SeleniumHQ
 
 USER seluser
 
@@ -29,6 +29,8 @@ ENV GRID_BROWSER_TIMEOUT 0
 ENV GRID_TIMEOUT 30
 # Debug
 ENV GRID_DEBUG false
+# As integer, maps to "port"
+ENV GRID_HUB_PORT 4444
 
 COPY generate_config \
     entry_point.sh \
